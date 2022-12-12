@@ -1,8 +1,17 @@
+import { MouseEventHandler } from 'react'
 import { useRecoilState } from 'recoil'
 import { currentPerfilState } from 'recoil/atoms'
+import { getPerfil } from 'services/api'
 
 const MainApresentation = () => {
-  const [perfil] = useRecoilState(currentPerfilState)
+  const [perfil, setPerfil] = useRecoilState(currentPerfilState)
+
+  const getNextPerfil: MouseEventHandler<HTMLButtonElement> = () => {
+    getPerfil().then((response) => {
+      const perfil_ = response.data?.results[0]
+      setPerfil(perfil_)
+    })
+  }
 
   return (
     <section className="col-span-2 flex flex-col items-center justify-center gap-y-2 border bg-white py-4 border-gray-500">
@@ -17,7 +26,10 @@ const MainApresentation = () => {
         <button className="mx-auto bg-blue-500 px-4 py-2 text-white">
           Follow
         </button>
-        <button className="absolute right-0 mr-3 self-end border px-4 py-2 shadow-md">
+        <button
+          onClick={getNextPerfil}
+          className="absolute right-0 mr-3 self-end border px-4 py-2 shadow-md"
+        >
           try the next one
         </button>
       </div>
