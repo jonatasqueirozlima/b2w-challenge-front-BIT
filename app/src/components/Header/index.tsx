@@ -1,9 +1,11 @@
+import FollowerList from './follower-list'
+
 const Header = () => {
   return (
-    <header className="fixed top-0 bg-blue-400 w-screen">
-      <div className="w-6/12 mx-auto py-2 text-white flex justify-between">
+    <header className="fixed top-0 w-screen bg-blue-400">
+      <div className="mx-auto flex w-6/12 justify-between py-4 text-white">
         <span className="">users_like.me</span>
-        <span>...</span>
+        <FollowerList />
       </div>
     </header>
   )
