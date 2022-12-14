@@ -4,11 +4,13 @@
 
 O desafio consiste em implementar uma aplicação client-side, que rode de forma consistente nos navegadores mais recentes e que seja responsiva para melhor visualização em dispositivos móveis.
 
-| Exemplo 1 | Exemplo 2 |
-| :-------: | :-------: |
 
-| ![](https://github.com/jonatasqueirozlima/b2w-challenge-front-BIT/tree/master/assets/b2w-challenge-img1.png) | ![](https://github.com/jonatasqueirozlima/b2w-challenge-front-BIT/tree/master/assets/b2w-challenge-img2.png) |
-
+<p>Resultado do projeto abaixo: </p>
+<p float="left">
+<img width="45%" src="https://github.com/jonatasqueirozlima/b2w-challenge-front-BIT/blob/master/assets/b2w-challenge-img1.png"/>
+<img width="45%" src="https://github.com/jonatasqueirozlima/b2w-challenge-front-BIT/blob/master/assets/b2w-challenge-img2.png"/>
+</p>   
+  
 <details>
 <summary><strong> Regras </strong></summary>
 
@@ -51,9 +53,6 @@ Link da [API](https://randomuser.me/api/).
 
 ## 👨‍💻 Rodando o projeto👨
 
-<details>
-  
-<summary><strong>Como rodar?</strong></summary>
   
 1. Clone o repositório com o comando: <br/>
   `git clone git@github.com:jonatasqueirozlima/b2w-challenge-front-BIT.git`;
@@ -63,7 +62,7 @@ Link da [API](https://randomuser.me/api/).
  - `docker-compose up -d --build`
 3. Acessar a seguinte URL: <br/>
   http://localhost:3000/
-</details>
+
 
 ---
 
