@@ -13,11 +13,11 @@ const ContactInfo: FC<Props> = ({ info: { cell, email, phone } }) => {
   return (
     <section>
       <ul className={`${isHidden && 'max-h-14'} overflow-hidden py-2`}>
-        <li>phone: {phone}</li>
-        <li>cell: {cell}</li>
-        <li>email: {email}</li>
+        <li className="li-before-content">phone: {phone}</li>
+        <li className="li-before-content">cell: {cell}</li>
+        <li className="li-before-content">email: {email}</li>
       </ul>
-      <section className="mt-2 pt-3 border-t-2 border-gray-500">
+      <section className="mt-2 border-t-2 border-gray-500 pt-3">
         <button className="bg-blue-200 px-4 py-2" onClick={handleContainer}>
           See more
         </button>
