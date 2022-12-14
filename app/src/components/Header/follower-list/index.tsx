@@ -1,4 +1,4 @@
-import useFollow from 'components/Contact/sessions/main-apresentation/follow-button/useFollow'
+import useFollow from 'components/Follow-button/useFollow'
 import FollowersContainer from './FollowersContainer'
 
 const FollowerList = () => {
