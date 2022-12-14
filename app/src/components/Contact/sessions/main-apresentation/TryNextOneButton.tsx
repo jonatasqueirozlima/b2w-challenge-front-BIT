@@ -40,7 +40,7 @@ const TryNextOneButton: FC<Props> = ({ setPerfil, perfil }) => {
   return (
     <button
       onClick={getNextPerfil}
-      className="absolute right-0 mr-3 self-end border px-4 py-2 shadow-md"
+      className="sm:absolute sm:right-0 mr-3 self-end border px-4 py-2 shadow-md"
     >
       try the next one
     </button>

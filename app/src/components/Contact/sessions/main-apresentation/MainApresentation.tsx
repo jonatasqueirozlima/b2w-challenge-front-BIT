@@ -16,7 +16,7 @@ const MainApresentation = () => {
           alt=""
         />
       </div>
-      <div className="relative  flex w-full justify-between">
+      <div className="relative flex w-full justify-between">
         <FollowButton perfil={perfil} />
         <TryNextOneButton perfil={perfil} setPerfil={setPerfil} />
       </div>

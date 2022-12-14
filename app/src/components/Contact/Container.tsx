@@ -5,7 +5,14 @@ type Props = {
 }
 
 const ContactContainer: FC<Props> = ({ children }) => {
-  return <section className="grid w-6/12 grid-cols-2 gap-2">{children}</section>
+  return (
+    <section
+      className="grid grid-cols-2 gap-2
+                xl:w-6/12 xl:max-w-3xl"
+    >
+      {children}
+    </section>
+  )
 }
 
 export default ContactContainer

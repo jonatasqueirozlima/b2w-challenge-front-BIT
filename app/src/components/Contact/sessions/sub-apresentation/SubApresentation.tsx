@@ -13,7 +13,10 @@ const SubApresentation: FC<Props> = ({ title }) => {
   const isContactInfo = title === 'Contact Info'
 
   return (
-    <section className="h-fit border border-gray-500 bg-white p-4">
+    <section
+      className="col-span-2 h-fit border border-gray-500 bg-white p-4
+                sm:col-span-1"
+    >
       <span className="font-bold">{title}</span>
 
       {isContactInfo && perfil && <ContactInfo info={perfil} />}
