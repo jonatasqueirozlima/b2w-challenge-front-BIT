@@ -10,3 +10,8 @@ export const followersState = atom<Perfil[] | []>({
   key: 'followersState', // unique ID (with respect to other atoms/selectors)
   default: [] // default value (aka initial value)
 })
+
+export const suggestionsState = atom<Perfil[] | []>({
+  key: 'suggestionsState', // unique ID (with respect to other atoms/selectors)
+  default: [] // default value (aka initial value)
+})
