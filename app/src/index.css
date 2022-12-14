@@ -7,3 +7,7 @@
     @apply before:content-['>'] before:mr-2;
   }
 }
+
+.bgTwoColors {
+  background: linear-gradient(180deg, #9023f2 30%, #ece8e8 30%);
+}

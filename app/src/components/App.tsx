@@ -6,7 +6,7 @@ import Suggestion from './Suggestion'
 function App() {
   return (
     <RecoilRoot>
-      <section className="flex min-h-screen flex-col items-center bg-blue-400 py-16">
+      <section className="flex min-h-screen flex-col items-center py-16 bgTwoColors">
         <Header />
 
         <span className="mb-4 text-4xl text-white text-center">

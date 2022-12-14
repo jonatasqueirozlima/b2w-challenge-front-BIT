@@ -8,7 +8,7 @@ const MainApresentation = () => {
   const [perfil, setPerfil] = useRecoilState(currentPerfilState)
 
   return (
-    <section className="col-span-2 flex flex-col items-center justify-center gap-y-2 border border-gray-500 bg-white py-4">
+    <section className="col-span-2 flex flex-col items-center justify-center gap-y-2 border shadow-lg bg-white py-4">
       <div className="h-40 w-40">
         <img
           className="h-full w-full rounded-full"

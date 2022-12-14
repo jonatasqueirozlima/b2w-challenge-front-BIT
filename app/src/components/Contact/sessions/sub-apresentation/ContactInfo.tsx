@@ -18,7 +18,7 @@ const ContactInfo: FC<Props> = ({ info: { cell, email, phone } }) => {
         <li className="li-before-content">email: {email}</li>
       </ul>
       <section className="mt-2 border-t-2 border-gray-500 pt-3">
-        <button className="bg-blue-200 px-4 py-2" onClick={handleContainer}>
+        <button className="bg-gray-200 px-4 py-2" onClick={handleContainer}>
           See more
         </button>
       </section>
