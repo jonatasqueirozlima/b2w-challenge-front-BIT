@@ -1,4 +1,4 @@
-import Suggestion from 'components/Suggestion'
+import Loading from 'components/Loading'
 import { useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 import { currentPerfilState } from 'recoil/atoms'
@@ -13,17 +13,24 @@ const Contact = () => {
 
   useEffect(() => {
     getPerfil().then((response) => {
-      const perfil_ = response.data?.results[0]
-      setPerfil(perfil_)
+      const perfil = response.data?.results[0]
+      setPerfil(perfil)
     })
   }, [])
 
   return (
     <ContactContainer>
-      <MainApresentation />
-      <SubApresentation info={perfil!} title="Personal Info" />
-      <SubApresentation info={perfil!} title="Contact Info" />
-      {/* <Suggestion /> */}
+      {perfil ? (
+        <>
+          <MainApresentation />
+          <SubApresentation title="Personal Info" />
+          <SubApresentation title="Contact Info" />
+        </>
+      ) : (
+        <section className="bg-white col-span-2 py-32">
+          <Loading />
+        </section>
+      )}
     </ContactContainer>
   )
 }
