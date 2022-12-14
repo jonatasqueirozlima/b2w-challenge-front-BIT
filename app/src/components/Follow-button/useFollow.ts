@@ -1,16 +1,26 @@
 import { useRecoilState } from 'recoil'
-import { followersState } from 'recoil/atoms'
+import { followersState, suggestionsState } from 'recoil/atoms'
 import { Perfil } from 'types'
 import { lstorage } from 'utils'
 
 const useFollow = () => {
   const [followers, setFollowers] = useRecoilState(followersState)
+  const [, setSuggestions] = useRecoilState(suggestionsState)
 
   const getFollower = (email: string) => {
     return followers.find((follower) => follower.email === email)
   }
 
   const follow = (perfil: Perfil) => {
+    setSuggestions((prev) => {
+      const suggestionsUpdated = prev.filter(
+        (suggestion) => suggestion.email !== perfil.email
+      )
+
+      lstorage('set', 'suggestions', suggestionsUpdated)
+      return suggestionsUpdated
+    })
+
     setFollowers((prev) => {
       const followersUpdated = [...prev, perfil]
       lstorage('set', 'followers', followersUpdated)
