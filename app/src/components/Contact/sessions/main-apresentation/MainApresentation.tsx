@@ -1,7 +1,7 @@
 import { useRecoilState } from 'recoil'
 import { currentPerfilState } from 'recoil/atoms'
 
-import FollowButton from './follow-button/FollowButton'
+import FollowButton from '../../../Follow-button/FollowButton'
 import TryNextOneButton from './TryNextOneButton'
 
 const MainApresentation = () => {
@@ -17,7 +17,7 @@ const MainApresentation = () => {
         />
       </div>
       <div className="relative  flex w-full justify-between">
-        <FollowButton perfil={perfil!} />
+        <FollowButton perfil={perfil} />
         <TryNextOneButton setPerfil={setPerfil} />
       </div>
       <span>
