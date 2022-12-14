@@ -1,4 +1,4 @@
-import FollowButton from 'components/Contact/sessions/main-apresentation/follow-button/FollowButton'
+import FollowButton from 'components/Follow-button/FollowButton'
 import { FC } from 'react'
 import { Perfil } from 'types'
 
@@ -26,7 +26,7 @@ const FollowerCard: FC<Props> = ({ perfil }) => {
           </span>
         </div>
       </div>
-      {/* <button className="bg-red-300">a</button> */}
+
       <FollowButton perfil={perfil} />
     </section>
   )

@@ -11,7 +11,7 @@ const FollowersPanel: FC<Props> = ({ followers, showPanel }) => {
   return (
     <>
       {showPanel && (
-        <section className=" absolute -top-1 -right-1 -z-10 bg-white p-4">
+        <section className="absolute -top-1 -right-1 z-10 bg-white p-4 shadow-xl">
           {followers?.map((follow) => (
             <FollowerCard key={follow.email} perfil={follow} />
           ))}

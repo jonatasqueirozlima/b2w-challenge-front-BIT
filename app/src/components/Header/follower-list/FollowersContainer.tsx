@@ -11,7 +11,7 @@ const FollowersContainer: FC<Props> = ({ followers }) => {
   const [showPanel, setShowPanel] = useState(false)
 
   const handlePanel = () => setShowPanel((prev) => !prev)
-  const followingTextColor = showPanel ? 'text-blue-500' : 'text-black'
+  const followingTextColor = showPanel ? 'text-blue-500' : 'text-white'
 
   return (
     <section className="relative">
@@ -19,8 +19,8 @@ const FollowersContainer: FC<Props> = ({ followers }) => {
         onClick={handlePanel}
         className={`flex items-center font-bold ${followingTextColor}`}
       >
-        <span>following {followers.length} users</span>
-        <ArrowIcon className="text-2xl" />
+        <span className="z-20">following {followers.length} users</span>
+        <ArrowIcon className={`z-20 text-2xl ${followingTextColor}`} />
       </button>
 
       <FollowersPanel showPanel={showPanel} followers={followers} />
