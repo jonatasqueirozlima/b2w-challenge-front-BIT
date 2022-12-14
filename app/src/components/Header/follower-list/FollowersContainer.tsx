@@ -11,7 +11,7 @@ const FollowersContainer: FC<Props> = ({ followers }) => {
   const [showPanel, setShowPanel] = useState(false)
 
   const handlePanel = () => setShowPanel((prev) => !prev)
-  const followingTextColor = showPanel ? 'text-blue-500' : 'text-white'
+  const followingTextColor = showPanel ? 'text-[#9023f2]' : 'text-white'
 
   return (
     <section className="relative">
