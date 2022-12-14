@@ -11,7 +11,7 @@ const FollowButton: FC<Props> = ({ perfil }) => {
   const [isFollowing, setIsFollowing] = useState(false)
 
   useEffect(() => {
-    setIsFollowing(!!getFollower(perfil.email))
+    setIsFollowing(!!getFollower(perfil?.email || ''))
   }, [perfil, followers])
 
   const colorButton = isFollowing ? 'bg-red-500' : 'bg-blue-500'
